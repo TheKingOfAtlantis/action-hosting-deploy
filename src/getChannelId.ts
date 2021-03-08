@@ -27,7 +27,7 @@ export function getChannelId(configuredChannelId: string, ghContext: Context) {
   } else {
     // Fallback so we always have a channel name for preview channel
     const branchName = ghContext.ref.substr(0, 20);
-    const sha = ghContext.sha.substr(0, 8) 
+    const sha = ghContext.sha.substr(0, 8);
     tmpChannelId = `commit${sha}-${branchName}`;
   }
 
